@@ -14,6 +14,8 @@ import {
 import { useEffect, useState } from "react";
 import MusicalClasses from "../components/MusicalClasses";
 import Stats from "../components/Stats";
+import InfoDivider from "../components/InfoDivider";
+import MusicGroups from "../components/MusicGroups";
 import url from 'url'
 
 export default function Home() {
@@ -165,16 +167,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Private Lessons banner */}
-        <section className="flex flex-col items-center justify-center w-full py-32 text-center bg-teal-300 sm:py-10 sm:flex-row" style={{ height: '15vh' }}>
-          <div className="w-auto sm:w-6/12">
-            <p className="inline-block text-2xl sm:text-4xl">Private Lessons</p>
-            <p className="inline-block max-w-lg mx-8 my-4 text-sm sm:ml-24 sm:text-xl">We offer music education for individuals of just about every age and skill level.</p>
-          </div>
-          <div className="sm:w-1/12">
-            <Button className="px-8 bg-teal-700 rounded-3xl">Learn More</Button>
-          </div>
-        </section>
+        <InfoDivider />
 
         {/* Big card */}
         <section className="flex items-center justify-center w-full py-10 text-black bg-white">
@@ -203,10 +196,7 @@ export default function Home() {
           </Card>
         </section>
 
-        {/* Groups for */}
-        <section className="flex items-center justify-center w-full py-10 text-black bg-gray-200">
-          Music Groups
-        </section>
+        <MusicGroups />
 
         {/* Banner with picture */}
         <section className="flex flex-col text-white items-center justify-center w-full py-10 h-96 text-black bg-center bg-cover bg-[url('/background-1.jpg')] opacity-40">
