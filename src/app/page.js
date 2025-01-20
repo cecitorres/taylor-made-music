@@ -12,6 +12,8 @@ import {
   CardFooter,
 } from "/material-tailwind/react";
 import { useEffect, useState } from "react";
+import MusicalClasses from "../components/MusicalClasses";
+import Stats from "../components/Stats";
 import url from 'url'
 
 export default function Home() {
@@ -80,11 +82,12 @@ export default function Home() {
   );
   return (
     // <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-    <div className="max-h-[68px]">
-      <main className="flex flex-col items-center row-start-2 sm:items-start">
+    <div className="">
+      <main className="flex flex-col items-center sm:items-start">
 
         {/* <div className="-m-6 max-h-[768px] w-[calc(100%+48px)] overflow-scroll"> */}
-
+        {/* Navbar */}
+        {/* <div className="absolute top-0 w-full"> */}
         <Navbar className="sticky top-0 z-10 block w-full max-w-full px-4 py-2 rounded-none h-max lg:px-8 lg:py-4">
           <div className="flex items-center justify-between text-blue-gray-900">
             <Image src={`/logo.png`} alt="Logo" width="100" height="100" />
@@ -141,35 +144,63 @@ export default function Home() {
           <MobileNav open={openNav}>
             {navList}
             <div className="flex items-center gap-x-1">
-              {/* <Button fullWidth variant="text" size="sm" className="">
-                  <span>Log In</span>
-                </Button> */}
               <Button fullWidth variant="gradient" size="sm" className="">
                 <span>Book Online</span>
               </Button>
             </div>
           </MobileNav>
         </Navbar>
+        {/* </div> */}
 
         {/* Picture big */}
-        <section className="h-full">
-          <Image src={`/home-1.jpg`} alt="Home" fill className="w-full bg-center bg-cover max-h" />
+        <section className="relative w-full overflow-hidden text-white bg-gradient-to-r from-purple-600 to-blue-600" style={{ height: '80vh' }}>
+          <div class="absolute inset-0">
+            <Image src={`/home-1.jpg`} alt="Home" fill className="object-cover object-center w-full h-full" />
+            <div class="absolute inset-0 bg-black opacity-50"></div>
+          </div>
+          <div class="relative z-10 flex flex-col justify-center items-center h-full text-center ">
+            <h1 class="text-5xl font-bold leading-tight mb-4">Music for Everyone</h1>
+            <p class="text-lg text-gray-300 mb-8">Awaken possibility.</p>
+            <a href="#" class="bg-yellow-400 text-gray-900 hover:bg-yellow-300 py-2 px-6 rounded-full text-lg font-semibold transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg uppercase">Start Learning</a>
+          </div>
         </section>
 
         {/* Private Lessons banner */}
-        <section className="flex items-center justify-center w-full py-10 bg-teal-300">
-          <div className="w-6/12">
-            <p className="inline-block text-4xl">Private Lessons</p>
-            <p className="inline-block max-w-lg ml-24 text-xl">We offer music education for individuals of just about every age and skill level.</p>
+        <section className="flex flex-col items-center justify-center w-full py-32 text-center bg-teal-300 sm:py-10 sm:flex-row" style={{ height: '15vh' }}>
+          <div className="w-auto sm:w-6/12">
+            <p className="inline-block text-2xl sm:text-4xl">Private Lessons</p>
+            <p className="inline-block max-w-lg mx-8 my-4 text-sm sm:ml-24 sm:text-xl">We offer music education for individuals of just about every age and skill level.</p>
           </div>
-          <div className="w-1/12">
+          <div className="sm:w-1/12">
             <Button className="px-8 bg-teal-700 rounded-3xl">Learn More</Button>
           </div>
         </section>
 
         {/* Big card */}
         <section className="flex items-center justify-center w-full py-10 text-black bg-white">
-          Big card
+          <Card className="flex-row w-full max-w-5xl rounded-none shadow-none min-h-96">
+            <CardHeader
+              shadow={false}
+              floated={false}
+              className="w-2/5 m-0 rounded-none shrink-0"
+            >
+              <Image src={`/image-1.jpg`} alt="Home" fill className="" />
+            </CardHeader>
+            <CardBody className="p-12 bg-gray-200">
+              <Typography variant="h4" color="blue-gray" className="mb-2">
+                Summer Arts Garden
+              </Typography>
+              <Typography color="gray" className="mb-8 font-normal">
+                We offers full-day and half-day music camps for kids of all ages and skill levels - including beginners!
+                Summer camps give students an opportunity to focus on one instrument or genre for a whole week.
+              </Typography>
+              <a href="#" className="inline-block">
+                <Button className="flex items-center gap-2">
+                  Learn More
+                </Button>
+              </a>
+            </CardBody>
+          </Card>
         </section>
 
         {/* Groups for */}
@@ -183,14 +214,10 @@ export default function Home() {
           <p className="text-lg">Explore several art forms as your child builds creativity and confidence in our new visual arts classes for ages 2-5!</p>
         </section>
 
-        {/* Musical instruments */}
-        <section className="flex items-center justify-center w-full py-10 text-black bg-white">
-          Musical Instruments
-        </section>
+        <MusicalClasses />
 
         {/* Stats */}
-        <section className="flex flex-col text-white items-center justify-center w-full py-10 h-96 text-black bg-center bg-cover bg-[url('/background-2.jpg')] opacity-40">
-        </section>
+        <Stats />
 
         {/* Green banner */}
         <section className="flex items-center justify-center w-full py-10 bg-teal-300">
