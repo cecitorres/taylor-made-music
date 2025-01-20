@@ -16,6 +16,7 @@ import MusicalClasses from "../components/MusicalClasses";
 import Stats from "../components/Stats";
 import InfoDivider from "../components/InfoDivider";
 import MusicGroups from "../components/MusicGroups";
+import LetsMakeArt from "../components/LetsMakeArt";
 import url from 'url'
 
 export default function Home() {
@@ -198,11 +199,7 @@ export default function Home() {
 
         <MusicGroups />
 
-        {/* Banner with picture */}
-        <section className="flex flex-col text-white items-center justify-center w-full py-10 h-96 text-black bg-center bg-cover bg-[url('/background-1.jpg')] opacity-40">
-          <h1 className="text-4xl">Let's make art!</h1>
-          <p className="text-lg">Explore several art forms as your child builds creativity and confidence in our new visual arts classes for ages 2-5!</p>
-        </section>
+        <LetsMakeArt />
 
         <MusicalClasses />
 
