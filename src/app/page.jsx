@@ -11,80 +11,15 @@ import {
   CardBody,
   CardFooter,
 } from "/material-tailwind/react";
-import { useEffect, useState } from "react";
 import MusicalClasses from "../components/MusicalClasses";
 import Stats from "../components/Stats";
 import InfoDivider from "../components/InfoDivider";
 import MusicGroups from "../components/MusicGroups";
 import LetsMakeArt from "../components/LetsMakeArt";
 import Hero from "../components/Hero";
-import url from 'url'
+import Nav from "../components/Nav";
 
 export default function Home() {
-  const [openNav, setOpenNav] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    window.addEventListener(
-      "resize",
-      () => window.innerWidth >= 960 && setOpenNav(false),
-    );
-  }, []);
-
-  const navList = (
-    <ul className="flex flex-col gap-2 mt-2 mb-4 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
-      <Typography
-        as="li"
-        variant="small"
-        color="blue-gray"
-        className="p-1 font-normal"
-      >
-        <a href="#" className="flex items-center">
-          Home
-        </a>
-      </Typography>
-      <Typography
-        as="li"
-        variant="small"
-        color="blue-gray"
-        className="p-1 font-normal"
-      >
-        <a href="#" className="flex items-center">
-          Pages
-        </a>
-      </Typography>
-      <Typography
-        as="li"
-        variant="small"
-        color="blue-gray"
-        className="p-1 font-normal"
-      >
-        <a href="#" className="flex items-center">
-          About
-        </a>
-      </Typography>
-      <Typography
-        as="li"
-        variant="small"
-        color="blue-gray"
-        className="p-1 font-normal"
-      >
-        <a href="#" className="flex items-center">
-          Classes
-        </a>
-      </Typography>
-      <Typography
-        as="li"
-        variant="small"
-        color="blue-gray"
-        className="p-1 font-normal"
-      >
-        <a href="#" className="flex items-center">
-          Contact
-        </a>
-      </Typography>
-    </ul>
-  );
   return (
     // <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
     <div className="">
@@ -92,73 +27,9 @@ export default function Home() {
 
         {/* <div className="-m-6 max-h-[768px] w-[calc(100%+48px)] overflow-scroll"> */}
         {/* Navbar */}
+        <Nav />
         {/* <div className="absolute top-0 w-full"> */}
-        <Navbar className={`fixed top-0 z-10 w-full max-w-full px-4 py-2 transition-all duration-300 rounded-none border-none h-max lg:px-8 lg:py-4 ${
-          scrolled 
-            ? "bg-teal-300" 
-            : "bg-transparent backdrop-blur-sm bg-white/30"
-        }`}>
-          <div className="flex items-center justify-between text-white">
-            <Image src={`/logo.png`} alt="Logo" width="100" height="100" />
-            <div className="flex items-center gap-4">
-              <div className="hidden mr-4 lg:block">{navList}</div>
-              <div className="flex items-center gap-x-1">
-                <Button
-                  variant="gradient"
-                  size="sm"
-                  className="hidden lg:inline-block"
-                >
-                  <span>Book Online</span>
-                </Button>
-              </div>
-              <IconButton
-                variant="text"
-                className="w-6 h-6 ml-auto text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
-                ripple={false}
-                onClick={() => setOpenNav(!openNav)}
-              >
-                {openNav ? (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    className="w-6 h-6"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M6 18L18 6M6 6l12 12"
-                    />
-                  </svg>
-                ) : (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="w-6 h-6"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M4 6h16M4 12h16M4 18h16"
-                    />
-                  </svg>
-                )}
-              </IconButton>
-            </div>
-          </div>
-          <MobileNav open={openNav} className={scrolled ? "bg-teal-300" : "bg-white/30 backdrop-blur-sm"}>
-            {navList}
-            <div className="flex items-center gap-x-1">
-              <Button fullWidth variant="gradient" size="sm" className="">
-                <span>Book Online</span>
-              </Button>
-            </div>
-          </MobileNav>
-        </Navbar>
+        
         {/* </div> */}
 
         {/* Picture big */}
