@@ -8,13 +8,23 @@ const nextConfig = {
   output: 'export',
 
   /**
-   * Set base path. This is the slug of your GitHub repository.
-   *
-   * @see https://nextjs.org/docs/app/api-reference/next-config-js/basePath
+   * Set base path dynamically based on environment.
+   * In production (GitHub Pages) use the repository name
+   * In development use no base path
    */
-  basePath: '/taylor-made-music',
+  basePath: process.env.NODE_ENV === 'production' ? '/taylor-made-music' : '',
 
   reactStrictMode: true,
+
+  /**
+   * Disable server-based image optimization. Next.js does not support
+   * dynamic features with static exports.
+   *
+   * @see https://nextjs.org/docs/app/api-reference/components/image#unoptimized
+   */
+  images: {
+    unoptimized: true,
+  },
 };
 
 export default nextConfig;

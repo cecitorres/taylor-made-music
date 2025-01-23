@@ -11,25 +11,30 @@ const Hero = () => {
     const subtitles = ['Adapting to your goals, your way', 'Learn, grow, and shine through music', 'Your growth is our goal'];
 
     useEffect(() => {
+        if (typeof window === 'undefined') return;
+        
         const observer = new IntersectionObserver(
             ([entry]) => {
                 setIsVisible(entry.isIntersecting);
             },
-            { threshold: 0.3 } // Trigger when at least 30% of the section is visible
+            { threshold: 0.3 }
         );
 
-        if (sectionRef.current) {
-            observer.observe(sectionRef.current);
+        const currentRef = sectionRef.current;
+        if (currentRef) {
+            observer.observe(currentRef);
         }
 
         return () => {
-            if (sectionRef.current) {
-                observer.unobserve(sectionRef.current);
+            if (currentRef) {
+                observer.unobserve(currentRef);
             }
         };
     }, []);
 
     useEffect(() => {
+        if (typeof window === 'undefined') return;
+        
         let interval;
         if (isVisible) {
             interval = setInterval(() => {
@@ -37,7 +42,7 @@ const Hero = () => {
             }, 10000);
         }
         return () => clearInterval(interval);
-    }, [isVisible]);
+    }, [isVisible, images.length]);
 
     return (
         <section 
