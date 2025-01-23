@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useState, useEffect } from 'react'
 import { Navbar, MobileNav, Button, IconButton, Typography } from "/material-tailwind/react"
 import Image from "next/image"

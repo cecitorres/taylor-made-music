@@ -1,6 +1,9 @@
+'use client'
+
 import React, { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
 import { Typography, Button } from "@material-tailwind/react";
+
 const Hero = () => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const [isVisible, setIsVisible] = useState(true);
