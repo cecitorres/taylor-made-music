@@ -23,7 +23,7 @@ const Nav = () => {
         className="p-1 font-normal"
       >
         <a href="#" className="flex items-center">
-          Pages
+          About
         </a>
       </Typography>
       <Typography
@@ -32,7 +32,7 @@ const Nav = () => {
         className="p-1 font-normal"
       >
         <a href="#" className="flex items-center">
-          About
+          Students
         </a>
       </Typography>
       <Typography

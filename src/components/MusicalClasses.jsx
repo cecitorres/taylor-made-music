@@ -4,8 +4,8 @@ import { Typography } from "@material-tailwind/react";
 export default function MusicalClasses() {
     return (
         /* Musical instruments */
-        <section className="flex flex-col items-center justify-center w-full py-10 text-black bg-white">
-            <Typography variant="h2" className="my-8">Musical Classes</Typography>
+        <section className="flex flex-col items-center justify-center w-full py-20 text-black bg-white">
+            <Typography variant="h2" className="mb-8">Musical Classes</Typography>
             <div className="grid w-10/12 grid-cols-4 gap-6">
                 <div className="min-h-full px-4 text-center music-class-item">
                     <Image src={'/icons/piano.svg'} alt="Piano" width="160" height="160" className="mx-auto fill-teal-300" />

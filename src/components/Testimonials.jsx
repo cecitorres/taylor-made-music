@@ -36,7 +36,7 @@ const Testimonials = () => {
   }
 
   return (
-    <section className="relative flex flex-col items-center justify-center w-full py-10 h-96">      <div
+    <section className="relative flex flex-col items-center justify-center w-full py-10 h-[450px]">      <div
       className="absolute inset-0 bg-center bg-cover"
       style={{ backgroundImage: "url('/background-3.jpg')" }} // Add your background image
     >

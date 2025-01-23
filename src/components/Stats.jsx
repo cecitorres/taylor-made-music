@@ -2,7 +2,7 @@ import React from 'react'
 import { Typography } from "@material-tailwind/react";
 function Stats() {
     return (
-        <section className="relative flex flex-col items-center justify-center w-full py-10 text-white h-96">
+        <section className="relative flex flex-col items-center justify-center w-full py-10 text-white h-[550px]">
             {/* Background div with opacity */}
             <div className="absolute inset-0 bg-[url('/background-2.jpg')] bg-center bg-cover opacity-40 z-0"></div>
             

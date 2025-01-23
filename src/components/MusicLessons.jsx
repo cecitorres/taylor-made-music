@@ -8,8 +8,9 @@ const MusicGroups = () => {
         <section className="w-full py-12 text-black bg-gray-200">
             {/* Header section with centered text */}
             <div className="mb-8 text-center">
-                <Typography variant="h3">Music Lessons</Typography>
-                <Typography variant="h6">for</Typography>
+                <Typography variant="h3">Students</Typography>
+                {/* subtitle should be teal and italic */}
+                <Typography variant="h6" className="text-sm italic font-normal text-teal-300">all ages, all levels</Typography>
             </div>
 
             {/* Grid layout for the cards */}

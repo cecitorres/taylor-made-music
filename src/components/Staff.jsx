@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa';
 import { Typography } from "@material-tailwind/react";
 
 const Staff = () => {
@@ -55,14 +56,14 @@ const Staff = () => {
                         <h2 className="mb-2 text-2xl">{teacher.name}</h2>
                         <p className="mb-4 text-gray-600">{teacher.role}</p>
                         <div className="flex gap-4">
-                            <a href={teacher.socials.facebook} className="text-green-400 hover:text-green-500">
-                                <i className="fab fa-facebook-f"></i>
+                            <a href={teacher.socials.facebook} className="text-teal-300 hover:text-teal-400">
+                                <FaFacebookF />
                             </a>
-                            <a href={teacher.socials.twitter} className="text-green-400 hover:text-green-500">
-                                <i className="fab fa-twitter"></i>
+                            <a href={teacher.socials.twitter} className="text-teal-300 hover:text-teal-400">
+                                <FaTwitter />
                             </a>
-                            <a href={teacher.socials.instagram} className="text-green-400 hover:text-green-500">
-                                <i className="fab fa-instagram"></i>
+                            <a href={teacher.socials.instagram} className="text-teal-300 hover:text-teal-400">
+                                <FaInstagram />
                             </a>
                         </div>
                     </div>

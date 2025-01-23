@@ -2,7 +2,7 @@ import React from 'react'
 import { Button, Typography } from '@material-tailwind/react'
 const LetsMakeArt = () => {
     return (
-        <section className="relative flex flex-col items-center justify-center w-full py-10 h-96">
+        <section className="relative flex flex-col items-center justify-center w-full py-10 h-80">
             <div className="absolute inset-0 bg-[url('/background-1.jpg')] bg-center bg-cover opacity-40"></div>
             <div className="relative z-10 w-1/2 text-center">
                 <Typography variant="h1" className="font-normal">Let&apos;s make art!</Typography>

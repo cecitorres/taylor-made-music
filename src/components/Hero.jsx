@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
-import { Typography } from "@material-tailwind/react";
+import { Typography, Button } from "@material-tailwind/react";
 const Hero = () => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const [isVisible, setIsVisible] = useState(true);
@@ -34,7 +34,7 @@ const Hero = () => {
         if (isVisible) {
             interval = setInterval(() => {
                 setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-            }, 5000);
+            }, 10000);
         }
         return () => clearInterval(interval);
     }, [isVisible]);
@@ -42,7 +42,7 @@ const Hero = () => {
     return (
         <section 
             ref={sectionRef}
-            className="relative w-full overflow-hidden text-white bg-gradient-to-r from-purple-600 to-blue-600" 
+            className="relative w-full overflow-hidden text-white bg-gradient-to-r" 
             style={{ height: '100vh' }}
         >
             {images.map((image, index) => (
@@ -56,15 +56,16 @@ const Hero = () => {
                 </div>
             ))}
             <div className="relative z-10 flex flex-col items-center justify-center h-full text-center">
-                <Typography variant="h1" className="mb-4 text-5xl font-bold leading-tight">
+                <Typography variant="h1" className="mb-4 text-6xl font-bold leading-tight">
                     {titles[currentImageIndex]}
                 </Typography>
-                <Typography variant="h2" className="mb-8 text-lg font-normal text-gray-300">
+                <Typography variant="h2" className="mb-8 text-2xl font-normal text-gray-300">
                     {subtitles[currentImageIndex]}
                 </Typography>
-                <a href="#" className="px-6 py-2 text-lg font-semibold text-gray-900 uppercase transition duration-300 ease-in-out transform bg-yellow-400 rounded-full hover:bg-yellow-300 hover:scale-105 hover:shadow-lg">
+                {/* <a href="#" className="px-6 py-2 font-normal text-gray-900 uppercase transition duration-300 ease-in-out transform bg-yellow-400 rounded-full text-md hover:bg-yellow-300 hover:scale-105 hover:shadow-lg">
                     Start Learning
-                </a>
+                </a> */}
+                <Button className="px-10 text-sm text-gray-900 bg-yellow-400 rounded-3xl hover:bg-yellow-300 hover:scale-105 hover:shadow-lg">Start Learning</Button>
             </div>
         </section>
     )
