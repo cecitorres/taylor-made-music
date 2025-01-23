@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import { Typography } from "@material-tailwind/react";
 
-const MusicGroups = () => {
+const Students = () => {
     return (
         <section className="w-full py-12 text-black bg-gray-200">
             {/* Header section with centered text */}
@@ -14,7 +14,7 @@ const MusicGroups = () => {
             </div>
 
             {/* Grid layout for the cards */}
-            <div className="grid grid-cols-1 gap-8 px-6 mx-auto md:grid-cols-2 lg:grid-cols-4 max-w-7xl">
+            <div className="grid grid-cols-2 gap-8 px-6 mx-auto lg:grid-cols-4 max-w-7xl">
                 <div className="flex flex-col items-center justify-center">
                     <div className="w-[200px] h-[200px] relative">
                         <Image
@@ -71,4 +71,4 @@ const MusicGroups = () => {
     )
 }
 
-export default MusicGroups
+export default Students

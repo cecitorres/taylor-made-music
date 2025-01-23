@@ -42,7 +42,7 @@ const Staff = () => {
             <Typography variant="h3" className="mb-2 text-center">Featured Teachers</Typography>
             <Typography variant="h6" className="mb-12 text-center text-green-400">staff</Typography>
 
-            <div className="container grid grid-cols-1 gap-8 mx-auto md:grid-cols-3">
+            <div className="container grid grid-cols-2 gap-8 mx-auto md:grid-cols-3">
                 {teachers.map((teacher, index) => (
                     <div key={index} className="flex flex-col items-center">
                         <div className="w-[200px] h-[200px] relative">

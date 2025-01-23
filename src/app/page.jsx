@@ -2,7 +2,7 @@
 import MusicalClasses from "../components/MusicalClasses";
 import Stats from "../components/Stats";
 import InfoDivider from "../components/InfoDivider";
-import MusicLessons from "../components/MusicLessons";
+import Students from "../components/Students";
 import LetsMakeArt from "../components/LetsMakeArt";
 import Hero from "../components/Hero";
 import Nav from "../components/Nav";
@@ -27,7 +27,7 @@ export default function Home() {
 
         <About />
 
-        <MusicLessons />
+        <Students />
 
         <LetsMakeArt />
 

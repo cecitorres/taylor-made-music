@@ -1,10 +1,23 @@
 import React from 'react'
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import 'leaflet/dist/leaflet.css';
 
 const Map = () => {
   return (
     <section className="w-full bg-white h-[350px]">
-      {/* static map of new westminster bc */}
-      <img src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2505.476987468998!2d-122.34051768421875!3d49.01688927930259!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54eab584e4323601%3A0x1c3bb99243deb742!2sDouglas%20College!5e0!3m2!1sen!2sca!4v1716518888081!5m2!1sen!2sca" alt="Map of New Westminster, BC" className="w-full h-full" />
+      {/* Map of metro Vancouver */}
+      <MapContainer
+        center={[49.2827, -123.1207]}
+        zoom={11}
+        scrollWheelZoom={false}
+        style={{ height: '100%', width: '100%' }}
+      >
+        <TileLayer
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
+          url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
+        />
+
+      </MapContainer>
     </section>
   )
 }
