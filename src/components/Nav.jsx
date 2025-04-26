@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { Navbar, MobileNav, Button, IconButton, Typography } from "/material-tailwind/react"
+import { Navbar, Collapse, Button, IconButton, Typography } from "@material-tailwind/react"
 import Image from "next/image"
 
 const Nav = () => {
@@ -10,56 +10,27 @@ const Nav = () => {
 
   const navList = (
     <ul className="flex flex-col gap-2 mt-2 mb-4 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
-      <Typography
-        as="li"
-        variant="small"
-        className="p-1 font-normal"
-      >
-        <a href="#" className="flex items-center">
-          Home
-        </a>
+      <Typography as="li" variant="small" className="p-1 font-normal">
+        <a href="#" className="flex items-center">Home</a>
       </Typography>
-      <Typography
-        as="li"
-        variant="small"
-        className="p-1 font-normal"
-      >
-        <a href="#" className="flex items-center">
-          About
-        </a>
+      <Typography as="li" variant="small" className="p-1 font-normal">
+        <a href="#" className="flex items-center">About</a>
       </Typography>
-      <Typography
-        as="li"
-        variant="small"
-        className="p-1 font-normal"
-      >
-        <a href="#" className="flex items-center">
-          Students
-        </a>
+      <Typography as="li" variant="small" className="p-1 font-normal">
+        <a href="#" className="flex items-center">Students</a>
       </Typography>
-      <Typography
-        as="li"
-        variant="small"
-        className="p-1 font-normal"
-      >
-        <a href="#" className="flex items-center">
-          Classes
-        </a>
+      <Typography as="li" variant="small" className="p-1 font-normal">
+        <a href="#" className="flex items-center">Classes</a>
       </Typography>
-      <Typography
-        as="li"
-        variant="small"
-        className="p-1 font-normal"
-      >
-        <a href="#" className="flex items-center">
-          Contact
-        </a>
+      <Typography as="li" variant="small" className="p-1 font-normal">
+        <a href="#" className="flex items-center">Contact</a>
       </Typography>
     </ul>
   );
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
+
     // Handle resize event
     window.addEventListener(
       "resize",
@@ -69,11 +40,7 @@ const Nav = () => {
     // Handle scroll event
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      if (scrollPosition > 100) { // You can adjust this value
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      setScrolled(scrollPosition > 100); // Adjust scroll threshold as needed
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -142,16 +109,16 @@ const Nav = () => {
           </IconButton>
         </div>
       </div>
-      <MobileNav open={openNav} className={scrolled ? "bg-teal-300" : "bg-white/30 backdrop-blur-sm"}>
+      <Collapse open={openNav} className={scrolled ? "bg-teal-300" : "bg-white/30 backdrop-blur-sm"}>
         {navList}
         <div className="flex items-center gap-x-1">
           <Button fullWidth variant="gradient" size="sm" className="">
             <span>Book Online</span>
           </Button>
         </div>
-      </MobileNav>
+      </Collapse>
     </Navbar>
   )
 }
 
-export default Nav
+export default Nav;
