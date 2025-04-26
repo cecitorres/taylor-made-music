@@ -21,7 +21,13 @@ module.exports = withMT({
       },
       animation: {
         scroll: 'scroll 20s linear infinite',
-      }
+      },
+      fontFamily: {
+        serif: ['"IBM Plex Serif"', 'serif'], // Add your custom font here
+        // IBM Plex Serif
+
+
+      },
     },
   },
   plugins: [],

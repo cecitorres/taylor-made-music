@@ -1,5 +1,7 @@
 import { ThemeProvider } from "/material-tailwind/react";
 import localFont from "next/font/local";
+import { IBM_Plex_Serif } from 'next/font/google';
+
 import "./globals.css";
 
 const geistSans = localFont({
@@ -12,6 +14,10 @@ const geistMono = localFont({
   variable: "--font-geist-mono",
   weight: "100 900",
 });
+const ibmPlexSerif = IBM_Plex_Serif({
+  subsets: ['latin'], // Specify subsets if needed
+  weight: ['400', '700']
+});
 
 export const metadata = {
   title: "Taylor Made Music",
@@ -23,7 +29,7 @@ export default function RootLayout({ children }) {
     <ThemeProvider>
       <html lang="en">
         <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+          className={`${geistSans.variable} ${geistMono.variable} ${ibmPlexSerif.className} antialiased`}
           >
           {children}
         </body>
