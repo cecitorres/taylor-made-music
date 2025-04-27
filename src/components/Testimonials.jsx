@@ -36,46 +36,43 @@ const Testimonials = () => {
   }
 
   return (
-    <section className="relative flex flex-col items-center justify-center w-full py-10 h-[450px]">      <div
-      className="absolute inset-0 bg-center bg-cover"
-      style={{ backgroundImage: "url('/background-3.jpg')" }} // Add your background image
-    >
-      <div className="absolute inset-0 bg-black/50"> {/* Dark overlay */}
-        <div className="flex items-center justify-center h-full">
-          <button
-            onClick={handlePrevious}
-            className="absolute text-4xl text-white transition-transform left-10 hover:scale-110"
-          >
-            <FaChevronLeft />
-          </button>
+    <section className="relative flex flex-col items-center justify-center w-full py-10 md:h-[450px] h-96">
+      <div className="absolute inset-0 bg-center bg-cover bg-[url('/background-3.jpg')]">
+        <div className="absolute inset-0 bg-black/50"> {/* Dark overlay */}
+          <div className="relative flex items-center justify-center w-full h-full">
+            <button
+              onClick={handlePrevious}
+              className="absolute text-2xl text-white transition-transform md:text-4xl left-4 md:left-10 hover:scale-110"
+            >
+              <FaChevronLeft />
+            </button>
 
-          <div className="max-w-3xl px-4 mx-auto text-center">
+            <div className="max-w-3xl px-4 mx-auto text-center">
+              <div className="w-[80px] h-[80px] md:w-[120px] md:h-[120px] relative mx-auto mb-4 md:mb-8">
+                <Image
+                  src={testimonialData[currentIndex].image}
+                  alt={testimonialData[currentIndex].author}
+                  className="object-cover rounded-full"
+                  fill
+                />
+              </div>
+              <p className="mb-4 text-xs md:mb-8 md:text-xl">
+                &quot;{testimonialData[currentIndex].text}&quot;
+              </p>
+              <div className="text-sm text-teal-400 md:text-base">
+                {testimonialData[currentIndex].author} / {testimonialData[currentIndex].role}
+              </div>
+            </div>
 
-            <div className="w-[120px] h-[120px] relative mx-auto mb-8">
-              <Image
-                src={testimonialData[currentIndex].image}
-                alt={testimonialData[currentIndex].author}
-                className="object-cover rounded-full"
-                fill
-              />
-            </div>
-            <p className="mb-8 text-2xl">
-              &quot;{testimonialData[currentIndex].text}&quot;
-            </p>
-            <div className="text-teal-400">
-              {testimonialData[currentIndex].author} / {testimonialData[currentIndex].role}
-            </div>
+            <button
+              onClick={handleNext}
+              className="absolute text-2xl text-white transition-transform md:text-4xl right-4 md:right-10 hover:scale-110"
+            >
+              <FaChevronRight />
+            </button>
           </div>
-
-          <button
-            onClick={handleNext}
-            className="absolute text-4xl text-white transition-transform right-10 hover:scale-110"
-          >
-            <FaChevronRight />
-          </button>
         </div>
       </div>
-    </div>
     </section>
   )
 }
