@@ -1,25 +1,26 @@
 import React from 'react'
 import { Typography } from "@material-tailwind/react";
 import { FaMapMarkerAlt, FaClock } from 'react-icons/fa';
+
 const Address = () => {
   return (
     <section className="w-full py-16 text-gray-800 bg-gray-100">
-      {/* 3 columns  */}
-      {/* 1 column for address */}
-      {/* 1 column blank for now */}
-      {/* 1 column for opening hours */}
-      <div className="grid w-10/12 grid-cols-4 mx-auto">
+      <div className="grid w-10/12 grid-cols-1 gap-8 mx-auto md:w-8/12 md:grid-cols-4">
+        {/* Address Section */}
         <div className="col-span-1">
-          <Typography variant="h4">Address</Typography>
-          {/* icon should be at the left of the text */}
+          <Typography variant="h4" className="font-serif">Address</Typography>
           <div className="flex items-center justify-start gap-4 mt-4">
             <FaMapMarkerAlt className="text-2xl text-teal-300" />
-            <Typography variant="paragraph">123 Main St, Anytown, USA</Typography>
+            <Typography variant="paragraph">New Westminster, BC, CA</Typography>
           </div>
         </div>
-        <div className="col-span-2"></div>
+
+        {/* Blank Space for Larger Screens */}
+        <div className="hidden col-span-2 md:block"></div>
+
+        {/* Opening Hours Section */}
         <div className="col-span-1">
-          <Typography variant="h4">Opening Hours</Typography>
+          <Typography variant="h4" className="font-serif">Opening Hours</Typography>
           <div className="flex justify-start gap-4 mt-4">
             <FaClock className="text-2xl text-teal-300" />
             <div className="flex flex-col items-start justify-start">
@@ -34,4 +35,4 @@ const Address = () => {
   )
 }
 
-export default Address
+export default Address;
