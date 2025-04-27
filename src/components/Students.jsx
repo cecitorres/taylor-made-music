@@ -8,7 +8,7 @@ const Students = () => {
         <section className="w-full py-12 text-black bg-gray-200">
             {/* Header section with centered text */}
             <div className="mb-8 text-center">
-                <Typography variant="h3" className="font-serif">Classes</Typography>
+                <Typography variant="h3" className="font-serif font-normal">Individual Classes</Typography>
                 {/* subtitle should be teal and italic */}
                 <Typography variant="h6" className="text-sm italic font-normal text-teal-300">for</Typography>
             </div>
