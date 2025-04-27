@@ -16,18 +16,20 @@ const Gallery = () => {
   return (
     <section className="w-full bg-white">
       <div className="w-full">
-        <div className="grid grid-cols-2 gap-0 md:grid-cols-4 lg:grid-cols-7">
+        <div className="grid grid-cols-1 gap-0 md:grid-cols-4 lg:grid-cols-7">
           {images.map((image, index) => (
-            <div 
-              key={index} 
-              className="relative aspect-square group"
+            <div
+              key={index}
+              className={`relative aspect-square group ${
+                index > 0 ? 'hidden md:block' : ''
+              }`}
             >
               <Image
                 src={image}
                 alt={`Music school image ${index + 1}`}
                 fill
                 className="object-cover"
-                sizes="(max-width: 768px) 50vw, (max-width: 1024px) 25vw, 14vw"
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 25vw, 14vw"
               />
               <div className="absolute inset-0 flex items-center justify-center transition-all duration-300 bg-black bg-opacity-0 group-hover:bg-opacity-40">
                 <FaSearch className="text-3xl text-white transition-opacity duration-300 opacity-0 group-hover:opacity-100" />
