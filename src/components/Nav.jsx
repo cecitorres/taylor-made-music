@@ -53,9 +53,9 @@ const Nav = () => {
   }, []);
 
   return (
-    <Navbar className={`fixed top-0 z-50 w-full max-w-full px-4 py-2 transition-all duration-300 rounded-none border-none shadow-none backdrop-blur-none justify-items-center backdrop-saturate-100 h-max lg:px-8 lg:py-4 ${scrolled
-        ? "bg-teal-300/100"
-        : "bg-transparent"
+    <Navbar className={`fixed top-0 z-50 w-full max-w-full px-4 py-2 transition-all duration-300 rounded-none border-t-0 border-x-0 shadow-none backdrop-blur-none justify-items-center backdrop-saturate-100 h-max lg:px-8 lg:py-4 border-gray-600/20 border-b-4 ${scrolled
+        ? "bg-teal-300/100 "
+        : "bg-transparent border-b-0"
       }`}>
       <div className="flex items-center justify-between w-10/12 text-white">
         <Image src={`/logo.png`} alt="Logo" width="100" height="100" />
