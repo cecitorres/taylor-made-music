@@ -15,7 +15,7 @@ const Hero = () => {
 
     useEffect(() => {
         if (typeof window === 'undefined') return;
-        
+
         const observer = new IntersectionObserver(
             ([entry]) => {
                 setIsVisible(entry.isIntersecting);
@@ -37,7 +37,7 @@ const Hero = () => {
 
     useEffect(() => {
         if (typeof window === 'undefined') return;
-        
+
         let interval;
         if (isVisible) {
             interval = setInterval(() => {
@@ -48,13 +48,14 @@ const Hero = () => {
     }, [isVisible, images.length]);
 
     return (
-        <section 
+        <section
+            id="home"
             ref={sectionRef}
-            className="relative w-full overflow-hidden text-white bg-gradient-to-r" 
+            className="relative w-full overflow-hidden text-white bg-gradient-to-r"
             style={{ height: '100vh' }}
         >
             {images.map((image, index) => (
-                <div 
+                <div
                     key={image}
                     className="absolute inset-0 transition-opacity duration-1000 ease-in-out"
                     style={{ opacity: currentImageIndex === index ? 1 : 0 }}
@@ -64,7 +65,7 @@ const Hero = () => {
                 </div>
             ))}
             <div className="relative z-10 flex flex-col items-center justify-center h-full text-center">
-                <Typography variant="h1" className="mb-4 text-6xl font-bold leading-tight">
+                <Typography variant="h1" className="mb-4 font-serif text-6xl font-medium leading-tight md:text-8xl">
                     {titles[currentImageIndex]}
                 </Typography>
                 <Typography variant="h2" className="mb-8 text-2xl font-normal text-gray-300">
@@ -73,7 +74,7 @@ const Hero = () => {
                 {/* <a href="#" className="px-6 py-2 font-normal text-gray-900 uppercase transition duration-300 ease-in-out transform bg-yellow-400 rounded-full text-md hover:bg-yellow-300 hover:scale-105 hover:shadow-lg">
                     Start Learning
                 </a> */}
-                <Button className="px-10 text-sm text-gray-900 bg-yellow-400 rounded-3xl hover:bg-yellow-300 hover:scale-105 hover:shadow-lg">Start Learning</Button>
+                <Button className="px-10 text-sm font-medium text-gray-900 bg-yellow-400 rounded-3xl hover:bg-yellow-300 hover:scale-105 hover:shadow-lg">Start Learning</Button>
             </div>
         </section>
     )

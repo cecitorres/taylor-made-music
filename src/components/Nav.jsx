@@ -11,19 +11,19 @@ const Nav = () => {
   const navList = (
     <ul className="flex flex-col gap-2 mt-2 mb-4 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
       <Typography as="li" variant="small" className="p-1 font-normal">
-        <a href="#" className="flex items-center">Home</a>
+        <a href="#home" className="flex items-center">Home</a>
       </Typography>
       <Typography as="li" variant="small" className="p-1 font-normal">
-        <a href="#" className="flex items-center">About</a>
+        <a href="#about" className="flex items-center">About</a>
+      </Typography>
+      {/* <Typography as="li" variant="small" className="p-1 font-normal">
+        <a href="#students" className="flex items-center">Students</a>
+      </Typography> */}
+      <Typography as="li" variant="small" className="p-1 font-normal">
+        <a href="#lessons" className="flex items-center">Lessons</a>
       </Typography>
       <Typography as="li" variant="small" className="p-1 font-normal">
-        <a href="#" className="flex items-center">Students</a>
-      </Typography>
-      <Typography as="li" variant="small" className="p-1 font-normal">
-        <a href="#" className="flex items-center">Classes</a>
-      </Typography>
-      <Typography as="li" variant="small" className="p-1 font-normal">
-        <a href="#" className="flex items-center">Contact</a>
+        <a href="#contact" className="flex items-center">Contact</a>
       </Typography>
     </ul>
   );

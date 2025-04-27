@@ -4,7 +4,7 @@ import { FaMapMarkerAlt, FaClock } from 'react-icons/fa';
 
 const Address = () => {
   return (
-    <section className="w-full py-16 text-gray-800 bg-gray-100">
+    <section id="contact" className="w-full py-16 text-gray-800 bg-gray-100">
       <div className="grid w-10/12 grid-cols-1 gap-8 mx-auto md:w-8/12 md:grid-cols-4">
         {/* Address Section */}
         <div className="col-span-1">

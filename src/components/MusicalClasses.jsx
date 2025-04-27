@@ -4,7 +4,7 @@ import { Typography } from "@material-tailwind/react";
 export default function MusicalClasses() {
     return (
         /* Musical instruments */
-        <section className="flex flex-col items-center justify-center w-full py-20 text-black bg-white lg:py-30">
+        <section id="lessons" className="flex flex-col items-center justify-center w-full py-20 text-black bg-white lg:py-30">
             <Typography variant="h2" className="mb-8 font-serif font-normal">Available Lessons</Typography>
             <div className="grid w-10/12 grid-cols-1 gap-6 lg:grid-cols-4 lg:w-8/12 lg:gap-10">
                 <div className="min-h-full px-4 text-center music-class-item">

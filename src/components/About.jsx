@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const About = () => {
     return (
-        <section className="flex items-center justify-center w-full px-4 py-10 text-black bg-white">
+        <section id="about" className="flex items-center justify-center w-full px-4 py-10 text-black bg-white">
             <Card className="flex flex-col w-full max-w-6xl rounded-none shadow-none md:flex-row">
                 <CardHeader
                     shadow={false}
