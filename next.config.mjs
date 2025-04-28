@@ -7,13 +7,6 @@ const nextConfig = {
    */
   output: 'export',
 
-  /**
-   * Set base path dynamically based on environment.
-   * In production (GitHub Pages) use the repository name
-   * In development use no base path
-   */
-  basePath: process.env.NODE_ENV === 'production' ? '/taylor-made-music' : '',
-
   reactStrictMode: true,
 
   /**
