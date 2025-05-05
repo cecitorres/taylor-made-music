@@ -1,5 +1,5 @@
 "use client";
-import MusicalClasses from "../components/MusicalClasses";
+import AvailableLessons from "../components/AvailableLessons";
 import Stats from "../components/Stats";
 import InfoDivider from "../components/InfoDivider";
 import Students from "../components/Students";
@@ -8,7 +8,7 @@ import Hero from "../components/Hero";
 import Nav from "../components/Nav";
 import Staff from "../components/Staff";
 import Testimonials from "../components/Testimonials";
-import Logos from "../components/Logos";
+// import Logos from "../components/Logos";
 import Gallery from "../components/Gallery";
 import Address from "../components/Address";
 // import Map from "../components/Map";
@@ -30,7 +30,7 @@ export default function Home() {
 
         <LetsMakeArt />
 
-        <MusicalClasses />
+        <AvailableLessons />
 
         <Stats />
 
@@ -40,7 +40,7 @@ export default function Home() {
 
         <Testimonials />
 
-        <Logos />
+        {/* <Logos /> */}
 
         <Address />
 

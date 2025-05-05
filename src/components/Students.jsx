@@ -18,7 +18,7 @@ const Students = () => {
                 <div className="flex flex-col items-center justify-center">
                     <div className="w-[200px] h-[200px] relative">
                         <Image
-                            src="/lessons-1.jpg"
+                            src="/lessons-1.webp"
                             alt="Kids"
                             fill
                             className="object-cover rounded-full"
@@ -31,7 +31,7 @@ const Students = () => {
                 <div className="flex flex-col items-center justify-center">
                     <div className="w-[200px] h-[200px] relative">
                         <Image
-                            src="/lessons-2.jpg"
+                            src="/lessons-2.webp"
                             alt="Teens"
                             fill
                             className="object-cover rounded-full scale-x-[-1]"
@@ -44,7 +44,7 @@ const Students = () => {
                 <div className="flex flex-col items-center justify-center">
                     <div className="w-[200px] h-[200px] relative">
                         <Image
-                            src="/lessons-3.jpg"
+                            src="/lessons-3.webp"
                             alt="Adults"
                             fill
                             className="object-cover rounded-full scale-x-[-1]"
@@ -57,7 +57,7 @@ const Students = () => {
                 <div className="flex flex-col items-center justify-center">
                     <div className="w-[200px] h-[200px] relative">
                         <Image
-                            src="/lessons-4.jpg"
+                            src="/lessons-4.webp"
                             alt="Groups"
                             fill
                             className="object-cover rounded-full"
