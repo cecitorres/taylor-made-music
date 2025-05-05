@@ -3,12 +3,12 @@ import Image from 'next/image';
 
 const Logos = () => {
   const logos = [
-    { src: "/partner-1.jpeg", alt: "Hotoh" },
-    { src: "/partner-2.png", alt: "Retrodesign" },
-    { src: "/partner-3.png", alt: "Retrobrand" },
-    { src: "/partner-4.png", alt: "Prestiges" },
-    { src: "/partner-5.png", alt: "Mountain" },
-    { src: "/partner-6.png", alt: "Partnerco" },
+    { src: "/partner-1.svg", alt: "The Royal Conservatory logo" },
+    { src: "/partner-2.png", alt: "Vancouver Community College logo" },
+    { src: "/partner-3.png", alt: "City of Burnaby logo" },
+    { src: "/partner-4.png", alt: "BC Conservatory of Music logo" },
+    { src: "/partner-5.png", alt: "Vancouver Olympic Games 2010 logo" },
+    { src: "/partner-6.jpg", alt: "Douglas Park logo" },
   ];
 
   return (
