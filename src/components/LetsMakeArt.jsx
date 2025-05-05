@@ -5,7 +5,7 @@ const LetsMakeArt = () => {
     return (
         <section className="relative flex flex-col items-center justify-center w-full py-10 h-80">
             {/* Background Image */}
-            <div className="absolute inset-0 bg-[url('/background-1.jpg')] bg-center bg-[length:1300px] md:bg-cover bg-no-repeat">
+            <div className="absolute inset-0 bg-[url('/background-1.webp')] bg-center bg-[length:1300px] md:bg-cover bg-no-repeat">
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-gray-800 opacity-70"></div>
             </div>

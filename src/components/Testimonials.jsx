@@ -8,7 +8,7 @@ const testimonialData = [
     text: "My son has been taking piano and guitar lessons for more than a year. He loves his teachers and I can tell that they really care about my kid too. Your music school is wonderful and I highly recommend.",
     author: "Louise Flores",
     role: "parent",
-    image: "/testimonial-1.jpg" // Add your image path here
+    image: "/testimonial-1.webp" // Add your image path here
   },
   // Add more testimonials here
   {
@@ -16,7 +16,7 @@ const testimonialData = [
     text: "The instructors are incredibly patient and skilled. My daughter has made remarkable progress.",
     author: "John Smith",
     role: "parent",
-    image: "/testimonial-2.jpg"
+    image: "/testimonial-2.webp"
   },
 ]
 
@@ -37,7 +37,7 @@ const Testimonials = () => {
 
   return (
     <section className="relative flex flex-col items-center justify-center w-full py-10 md:h-[450px] h-96">
-      <div className="absolute inset-0 bg-center bg-cover bg-[url('/background-3.jpg')]">
+      <div className="absolute inset-0 bg-center bg-cover bg-[url('/background-3.webp')]">
         <div className="absolute inset-0 bg-black/50"> {/* Dark overlay */}
           <div className="relative flex items-center justify-center w-full h-full">
             <button

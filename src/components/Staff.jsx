@@ -8,7 +8,7 @@ const Staff = () => {
         {
             name: "Taylor Hett",
             role: "Pianist, Guitarist",
-            image: "/teacher-1.jpg",
+            image: "/teacher-1.webp",
             socials: {
                 facebook: "#",
                 twitter: "#",

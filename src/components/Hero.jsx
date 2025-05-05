@@ -8,7 +8,7 @@ const Hero = () => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const [isVisible, setIsVisible] = useState(true);
     const sectionRef = useRef(null);
-    const images = ['/home-1.jpg', '/home-2.jpg', '/home-3.jpg'];
+    const images = ['/home-1.webp', '/home-2.webp', '/home-3.webp'];
     // Titles and subtitles for each image
     const titles = ['Your Journey, Your Music', 'Where Dreams Begin', 'From Basics to Brilliance'];
     const subtitles = ['Adapting to your goals, your way', 'Learn, grow, and shine through music', 'Your growth is our goal'];
